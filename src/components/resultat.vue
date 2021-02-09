@@ -48,7 +48,7 @@
         >
             <input type="hidden" name="form-name" value="devis" />
             <input type="text" v-model="nom" name="nom">
-            <input type="text" v-model="email" name="email">
+            <input type="text" v-model="mail" name="email">
             <input type="text" v-model="$store.state.choix" name="choix">
             <input type="text" v-model="$store.state.site.type" name="type">
             <input type="text" v-model="$store.state.prix" name="prix">
