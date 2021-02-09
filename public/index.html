@@ -12,6 +12,30 @@
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
+    <form 
+        name="devis" 
+        method="POST" 
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        hidden
+        >
+            <input type="hidden" name="form-name" value="devis" />
+            <input type="text" v-model="$store.state.choix" name="choix">
+            <input type="text" v-model="$store.state.site.type" name="type">
+            <input type="text" v-model="$store.state.prix" name="prix">
+            <input type="text" v-model="$store.state.site.fonctions.booking" name="Options_site_booking">
+            <input type="text" v-model="$store.state.site.fonctions.contact" name="Options_site_contact">
+            <input type="text" v-model="$store.state.site.fonctions.form" name="Options_site_form">
+            <input type="text" v-model="$store.state.site.stats" name="Options_site_gAnalytics">
+            <input type="text" v-model="$store.state.site.contenu" name="Options_site_contenu">
+            <input type="text" v-model="$store.state.site.domain" name="Options_site_domain">
+            <button type="submit">
+                <div class="button button-gradient">
+                    <p>Envoyer votre demande et contact</p>
+                </div>
+            </button>
+        </form>
+    
     <!-- built files will be auto injected -->
   </body>
 </html>

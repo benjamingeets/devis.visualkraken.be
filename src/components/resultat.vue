@@ -36,7 +36,7 @@
 
         <p id="prix">Estimation : <span class="bold">à partir de {{$store.state.prix}}<span v-if="$store.state.site.type != 'Assistance' && $store.state.site.type != 'Gestion de réseaux sociaux'">€</span></span> (tarif indicatif et HTVA)</p>
         <!-- Ici mettre le submit-->
-
+        
         <form 
         name="devis" 
         method="POST" 
