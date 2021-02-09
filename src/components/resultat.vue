@@ -37,7 +37,13 @@
         <p id="prix">Estimation : <span class="bold">à partir de {{$store.state.prix}}<span v-if="$store.state.site.type != 'Assistance' && $store.state.site.type != 'Gestion de réseaux sociaux'">€</span></span> (tarif indicatif et HTVA)</p>
         <!-- Ici mettre le submit-->
 
-        <form name="devis" method="POST" action="/" netlify>
+        <form 
+        name="devis" 
+        method="POST" 
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        >
+            <input type="hidden" name="form-name" value="devis" />
             <input type="text" v-model="$store.state.choix" name="choix">
             <input type="text" v-model="$store.state.site.type" name="type">
             <input type="text" v-model="$store.state.prix" name="prix">
