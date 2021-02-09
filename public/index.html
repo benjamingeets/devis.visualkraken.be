@@ -20,6 +20,8 @@
         hidden
         >
             <input type="hidden" name="form-name" value="devis" />
+            <input type="text" v-model="nom" name="nom">
+            <input type="text" v-model="email" name="email">
             <input type="text" v-model="$store.state.choix" name="choix">
             <input type="text" v-model="$store.state.site.type" name="type">
             <input type="text" v-model="$store.state.prix" name="prix">
@@ -31,7 +33,7 @@
             <input type="text" v-model="$store.state.site.domain" name="Options_site_domain">
             <button type="submit">
                 <div class="button button-gradient">
-                    <p>Envoyer votre demande et contact</p>
+                    <p>Envoyer votre demande</p>
                 </div>
             </button>
         </form>

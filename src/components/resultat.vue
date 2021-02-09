@@ -36,7 +36,10 @@
 
         <p id="prix">Estimation : <span class="bold">à partir de {{$store.state.prix}}<span v-if="$store.state.site.type != 'Assistance' && $store.state.site.type != 'Gestion de réseaux sociaux'">€</span></span> (tarif indicatif et HTVA)</p>
         <!-- Ici mettre le submit-->
-        
+        <div class="details">
+            <input type="text" v-model="nom" placeholder="Nom">
+        <input type="email" v-model="mail" placeholder="E-mail">
+        </div>
         <form 
         name="devis" 
         method="POST" 
@@ -44,6 +47,8 @@
         data-netlify-honeypot="bot-field"
         >
             <input type="hidden" name="form-name" value="devis" />
+            <input type="text" v-model="nom" name="nom">
+            <input type="text" v-model="email" name="email">
             <input type="text" v-model="$store.state.choix" name="choix">
             <input type="text" v-model="$store.state.site.type" name="type">
             <input type="text" v-model="$store.state.prix" name="prix">
@@ -55,13 +60,14 @@
             <input type="text" v-model="$store.state.site.domain" name="Options_site_domain">
             <button type="submit">
                 <div class="button button-gradient">
-                    <p>Envoyer votre demande et contact</p>
+                    <p>Envoyer votre demande</p>
                 </div>
             </button>
         </form>
         <div id="back">
+            <p>Nous vous recontacterons au plus vite.</p>
             <a href="https://visualkraken.be">
-            <p>Ou revenir sur <span class="underline">visualkraken.be</span></p>
+            <p>🔙 revenir sur <span class="underline">visualkraken.be</span>.</p>
         </a>
         </div>
     </div>
@@ -70,12 +76,32 @@
 <script>
 export default {
     name:"resultat",
+    data(){
+        return{
+            mail : "",
+            nom : ""
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-input{
-    display: none;
+.details{
+    display: flex;
+    justify-content: center;
+    input{
+        border:2px solid gray;
+        width: 30%;
+        height: 30px;
+        padding-left:10px;
+        margin-right:20px;
+        border-radius:0.5em;
+    }
+}
+form{
+    input{
+        display: none;
+    }
 }
 .resultat{
     margin:100px 0;
