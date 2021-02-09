@@ -45,6 +45,7 @@
         method="POST" 
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        action="/merci"
         >
             <input type="hidden" name="form-name" value="devis" />
             <input type="text" v-model="nom" name="nom">
