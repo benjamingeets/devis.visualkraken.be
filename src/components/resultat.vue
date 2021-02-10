@@ -16,12 +16,12 @@
                         <li  v-if='$store.state.site.fonctions.booking'>Prise de rendez-vous</li>
                     </ul>
                 </li>
-                <li v-if="$store.state.site.logo == 'oui'">Nouveau logo</li>
+                <li v-if="$store.state.site.logo == 'Oui'">Nouveau logo</li>
             </ul>
             <p>Ce qui est inclus dans notre offre : </p>
             <ul>
                 <li>Un site écologique et léger</li>
-                <li>Responsie web design</li>
+                <li>Responsive web design</li>
                 <li>Optimisation SEO</li>
                 <li>Design unique</li>
                 <li>Site sécurisé avec le protocle SSL</li>
