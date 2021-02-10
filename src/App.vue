@@ -169,9 +169,12 @@ p{
   }
 }
 
-@media(max-width:400px){
+@media(max-width:500px){
   .infos{
     display: none;
+  }
+  .content{
+    width: 80%;
   }
 }
 </style>
