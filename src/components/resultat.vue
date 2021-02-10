@@ -139,4 +139,15 @@ button{
     #back{
         text-align: center;
     }
+    @media (max-width:500px) {
+        .details{
+            flex-direction: column;
+            width: 100%;
+            input{
+                width: 80%;
+                margin:auto;
+                margin-top:10px;
+            }
+        }
+    }
 </style>
