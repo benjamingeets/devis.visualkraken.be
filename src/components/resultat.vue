@@ -24,7 +24,7 @@
                 <li>Responsive web design</li>
                 <li>Optimisation SEO</li>
                 <li>Design unique</li>
-                <li>Site sécurisé avec le protocle SSL</li>
+                <li>Site sécurisé avec le protocole SSL</li>
             </ul>
         </div>
 
