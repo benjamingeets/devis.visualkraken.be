@@ -7,9 +7,6 @@
         <div class="button" @click="choisir('Graphisme')">
             <p>Graphisme</p>
         </div>
-        <div class="button" @click="choisir('Communication')">
-            <p>Communication</p>
-        </div>
     </div>
 </template>
 
